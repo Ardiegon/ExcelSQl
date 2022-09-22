@@ -1,1 +1,0 @@
- "SELECT pracownicy.id, team, COALESCE(done, 'nie' ) AS wynik FROM pracownicy LEFT JOIN podeszli ON pracownicy.id = podeszli.id"
