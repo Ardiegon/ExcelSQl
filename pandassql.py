@@ -5,10 +5,10 @@ import os.path as op
 def parse():
     import argparse
 
-    parser = argparse.ArgumentParser(description='Make SQL command for couple of excels, for Samsung GA <3')
+    parser = argparse.ArgumentParser(description='Make SQL command for couple of excels.')
+    parser.add_argument('--sql', help='SQL command to play with exels', required=True)
     parser.add_argument('--excels', type=str, nargs='+',
-                        help='paths to excels')
-    parser.add_argument('--sql', help='SQL command to play with exels')
+                        help='paths to excels', required=True)
 
     args = parser.parse_args()
     return args
